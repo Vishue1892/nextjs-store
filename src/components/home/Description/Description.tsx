@@ -1,9 +1,19 @@
+import styles from './Description.module.sass'
+import Image from 'next/image'
+
 export const Description = () => {
     return(
-        <section>
-            <img src="/images/description.jpeg" alt="products marketplace" />
-            <h2>Description</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quia ea quas. Deserunt eaque et quo repellendus error laboriosam velit quia reprehenderit quibusdam dolorum ipsam voluptates, odio ut dolor delectus?</p>
+        <section className={styles.Description}>
+            <Image 
+            src="/images/description.jpeg" 
+            alt="products marketplace" 
+            width={500} 
+            height={300} 
+            />
+            <div className={styles.Description__text}>
+            <h2>Bring the future Today</h2>
+            <p>Future World: You Gateway to Tomorrow's Tech! Dive into a world of cutting-edge gadgets and gear. Stay ahead of the curve and redefine your digital lifestyle with us.</p>
+            </div>
         </section>
     )
 }
