@@ -8,9 +8,9 @@ const getProducts = async () => {
         'X-Shopify-Access-Token': process.env.SHOPIFY_API_KEY || ""
       })
     })
-    // throw new Error('Error');
-    // const { products } = await response.json()
-    // return products
+    throw new Error('Error');
+    const { products } = await response.json()
+    return products
   } catch (error) {
     console.log(error)
   }
