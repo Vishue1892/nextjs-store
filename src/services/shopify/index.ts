@@ -8,10 +8,10 @@ export const getProducts = async () => {
         headers: new Headers({
           'X-Shopify-Access-Token': env.SHOPIFY_TOKEN
         })
-      })
-      throw new Error('Error');
+      })  
       const { products } = await response.json()
       return products
     } catch (error) {
     }
   }
+  // throw new Error('Error'); ESTA LINEA VA EN LA 12 O VA ARRIBA DE ESTA const { products } = await response.json()
