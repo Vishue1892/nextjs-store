@@ -8,7 +8,7 @@ export default async function Layout({children}:{children:React.ReactNode}) {
             <nav>
                 {
                     collections.map((collection)=>(
-                        <Link key={collection.id} href={collection.handle}>
+                        <Link key={collection.id} href={'/store/'+ collection.handle}>
                             {collection.title}
                         </Link>
                     ))

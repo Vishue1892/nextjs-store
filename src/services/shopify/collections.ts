@@ -22,3 +22,16 @@ export const getCollections = async () => {
     }
   }
   // throw new Error('Error'); ESTA LINEA VA EN LA 12 O VA ARRIBA DE ESTA const { products } = await response.json()
+  export const getCollectionProducts = async (id: string)=>{
+   try {
+    const response =await fetch(shopifyUrls.collections.products(id),{
+      headers: new Headers({
+        'X-Shopify-Access-Token': env.SHOPIFY_TOKEN
+      })
+    })
+    const {products} = await response.json()
+    return products
+   } catch (error) {
+    console.log(error)
+   } 
+  }
