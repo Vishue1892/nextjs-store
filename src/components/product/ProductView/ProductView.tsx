@@ -1,8 +1,10 @@
 import Image from "next/image";
-
 import { SanitizeHTML } from "app/components/shared/SanitizeHTML";
 import styles from './ProductView.module.sass'
 import { useRouter } from "next/navigation";
+import { ProductViewItemsOrder } from "./ProductViewItemsOrder";
+
+
 interface ProductViewProps {
   product: ProductType
 }

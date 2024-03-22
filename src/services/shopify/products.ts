@@ -41,7 +41,6 @@ export const getMainProducts = async () => {
     }
   })
 
-  const {products} = await response.json()
-
-  return products
+  const products = await response.json()
+  return products.products
 }
