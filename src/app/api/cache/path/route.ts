@@ -14,7 +14,6 @@ export async function POST(request:Request) {
             return Response.json({error:"Invalid token"}, {status:401});
         }
 
-
         revalidatePath(path);
 
         return Response.json({succes:true});
